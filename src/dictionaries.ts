@@ -28,11 +28,6 @@ export const dictionaries = {
     projects: {
       title: "Projects",
       viewGithub: "View on GitHub",
-      contractManagerTitle: "Contract Manager",
-      contractManagerDescription: "Interactive contract management dashboard with financial overview, expenses, milestones, and payments, powered by fictional demo data.",
-      mockData: "Mock data",
-      liveDemo: "Live demo",
-      sourceCode: "Source code",
     },
     contact: {
       title: "Contact",
@@ -70,11 +65,6 @@ export const dictionaries = {
     projects: {
       title: "Projetos",
       viewGithub: "Ver no GitHub",
-      contractManagerTitle: "Gestor de Contratos",
-      contractManagerDescription: "Painel interativo para acompanhar contratos, etapas, despesas e pagamentos, com dados fictícios para demonstração.",
-      mockData: "Dados fictícios",
-      liveDemo: "Acessar demonstração",
-      sourceCode: "Ver código-fonte",
     },
     contact: {
       title: "Contato",
@@ -88,4 +78,3 @@ export const dictionaries = {
 
 export type Locale = "en" | "pt";
 export const getDictionary = (lang: Locale) => dictionaries[lang];
-
