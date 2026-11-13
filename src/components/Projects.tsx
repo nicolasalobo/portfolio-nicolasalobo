@@ -1,27 +1,45 @@
 import Link from "next/link";
 
+type PortfolioProject = {
+    id: number;
+    title: string;
+    description: string;
+    tags: string[];
+    githubLink?: string;
+    demoLink?: string;
+    repositoryLink?: string;
+};
+
 export default function Projects({ dict }: { dict: any }) {
-    const projects = [
+    const projects: PortfolioProject[] = [
         {
             id: 1,
             title: "Project Alpha",
             description: "A full-stack e-commerce application built with Next.js and Stripe.",
             tags: ["Next.js", "Stripe", "PostgreSQL"],
-            link: "https://github.com"
+            githubLink: "https://github.com"
         },
         {
             id: 2,
             title: "Task Master",
             description: "Productivity tool for managing daily tasks and workflows.",
             tags: ["React", "Redux", "Firebase"],
-            link: "https://github.com"
+            githubLink: "https://github.com"
         },
         {
             id: 3,
             title: "Portfolio v1",
             description: "My first portfolio website using HTML/CSS and JavaScript.",
             tags: ["HTML", "CSS", "JavaScript"],
-            link: "https://github.com"
+            githubLink: "https://github.com"
+        },
+        {
+            id: 4,
+            title: dict.projects.contractManagerTitle,
+            description: dict.projects.contractManagerDescription,
+            tags: ["Next.js", "TypeScript", "Tailwind CSS", dict.projects.mockData],
+            demoLink: "https://gestor-contratos-portfolio.vercel.app",
+            repositoryLink: "https://github.com/nicolasalobo/gestor-contratos-portfolio"
         }
     ];
 
@@ -40,9 +58,23 @@ export default function Projects({ dict }: { dict: any }) {
                                         <span key={tag} className="text-sm px-3 py-1 bg-card-bg border border-card-border rounded-full text-secondary">{tag}</span>
                                     ))}
                                 </div>
-                                <Link href={project.link} target="_blank" className="inline-block text-primary font-semibold mt-auto hover:underline">
-                                    {dict.projects.viewGithub}
-                                </Link>
+                                <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2">
+                                    {project.demoLink && (
+                                        <Link href={project.demoLink} target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-semibold hover:underline">
+                                            {dict.projects.liveDemo}
+                                        </Link>
+                                    )}
+                                    {project.githubLink && (
+                                        <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-semibold hover:underline">
+                                            {dict.projects.viewGithub}
+                                        </Link>
+                                    )}
+                                    {project.repositoryLink && (
+                                        <Link href={project.repositoryLink} target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-semibold hover:underline">
+                                            {dict.projects.sourceCode}
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -51,3 +83,4 @@ export default function Projects({ dict }: { dict: any }) {
         </section>
     );
 }
+
