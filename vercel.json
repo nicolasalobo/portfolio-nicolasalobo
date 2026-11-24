@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pt",
+      "permanent": false
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "recovery/portfolio-dark": false
+    }
+  }
+}

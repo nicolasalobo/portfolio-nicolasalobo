@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Ferramentas",
+      "title": "Ferramentas disponíveis",
+      "caption": "PYTHON TOOLS HUB",
+      "status": "4 detectadas",
+      "metricLabel": "Scripts encontrados",
+      "metricValue": "04",
+      "rows": [
+        {
+          "label": "Processador de sprites",
+          "value": "Imagem"
+        },
+        {
+          "label": "Remoção de fundo",
+          "value": "Imagem"
+        },
+        {
+          "label": "Exportação ZIP",
+          "value": "Arquivos"
+        }
+      ]
+    },
+    {
+      "tab": "Sprites",
+      "title": "Preparar uma folha",
+      "caption": "PROCESSAMENTO DE SPRITES",
+      "status": "Ajustes prontos",
+      "metricLabel": "Quadros detectados",
+      "metricValue": "16",
+      "rows": [
+        {
+          "label": "Tamanho do quadro",
+          "value": "Configurável"
+        },
+        {
+          "label": "Margem",
+          "value": "Configurável"
+        },
+        {
+          "label": "Saída",
+          "value": "PNG"
+        }
+      ]
+    },
+    {
+      "tab": "Exportar",
+      "title": "Empacotar resultados",
+      "caption": "EXPORTAÇÃO DE ARQUIVOS",
+      "status": "Pronto para baixar",
+      "metricLabel": "Arquivos de saída",
+      "metricValue": "03",
+      "rows": [
+        {
+          "label": "Imagem tratada",
+          "value": "PNG"
+        },
+        {
+          "label": "Prévia",
+          "value": "PNG"
+        },
+        {
+          "label": "Pacote",
+          "value": "ZIP"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projetos",
+      "experience": "Experiência",
+      "about": "Sobre",
+      "lab": "Laboratório",
+      "contact": "Contato",
+      "menu": "Abrir menu",
+      "closeMenu": "Fechar menu",
+      "progress": "Progresso da página",
+      "themeLight": "Ativar tema claro",
+      "themeDark": "Ativar tema escuro",
+      "language": "Mudar idioma para inglês"
+    },
+    "contact": {
+      "eyebrow": "PRÓXIMO PASSO",
+      "title": "Vamos conversar sobre o que precisa funcionar melhor.",
+      "description": "Se você está contratando ou tem uma operação para melhorar, me conte o contexto. Eu respondo por e-mail.",
+      "copy": "Copiar e-mail",
+      "copied": "E-mail copiado",
+      "copyFailed": "Não foi possível copiar. Selecione o endereço abaixo.",
+      "email": "E-mail",
+      "select": "Selecionar endereço",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Baixar currículo em português",
+      "preparing": "O currículo está em preparação."
+    },
+    "projects": {
+      "eyebrow": "TRABALHO SELECIONADO",
+      "title": "Sistemas que resolvem o dia a dia.",
+      "description": "Quatro projetos, cada um partindo de uma operação ou experiência que pode ser melhorada.",
+      "filters": {
+        "all": "Todos",
+        "systems": "Sistemas",
+        "interfaces": "Interfaces",
+        "automation": "Automação"
+      },
+      "count": "projetos",
+      "openCase": "Explorar case",
+      "source": "Código público",
+      "demoLabel": "Prévia demonstrativa",
+      "empty": "Nenhum projeto nesta categoria.",
+      "skillsHeading": "Escolha uma tecnologia para destacar projetos relacionados."
+    },
+    "case": {
+      "back": "Voltar aos projetos",
+      "overview": "CONTEXTO",
+      "features": "O que foi construído",
+      "decisions": "Participação e decisões",
+      "flow": "Fluxo da solução",
+      "preview": "PRÉVIA ILUSTRATIVA",
+      "previewNote": "Interface demonstrativa com dados fictícios",
+      "stack": "Tecnologias",
+      "limits": "Escopo desta apresentação",
+      "limitationsPrivate": "Este case preserva os detalhes privados do projeto. A prévia é uma composição independente e não acessa dados de produção.",
+      "limitationsPublic": "A prévia é uma composição ilustrativa e não representa uma sessão conectada ao projeto.",
+      "nextCase": "Próximo case",
+      "previousCase": "Case anterior",
+      "notFound": "Este projeto não está disponível."
+    },
+    "language": "pt"
+  }
+}

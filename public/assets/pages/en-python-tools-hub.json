@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Tools",
+      "title": "Available tools",
+      "caption": "PYTHON TOOLS HUB",
+      "status": "4 discovered",
+      "metricLabel": "Scripts found",
+      "metricValue": "04",
+      "rows": [
+        {
+          "label": "Sprite processor",
+          "value": "Image"
+        },
+        {
+          "label": "Background removal",
+          "value": "Image"
+        },
+        {
+          "label": "ZIP export",
+          "value": "Files"
+        }
+      ]
+    },
+    {
+      "tab": "Sprites",
+      "title": "Prepare a sprite sheet",
+      "caption": "SPRITE PROCESSING",
+      "status": "Ready to adjust",
+      "metricLabel": "Frames detected",
+      "metricValue": "16",
+      "rows": [
+        {
+          "label": "Frame size",
+          "value": "Configurable"
+        },
+        {
+          "label": "Padding",
+          "value": "Configurable"
+        },
+        {
+          "label": "Output",
+          "value": "PNG"
+        }
+      ]
+    },
+    {
+      "tab": "Export",
+      "title": "Bundle the results",
+      "caption": "FILE EXPORT",
+      "status": "Ready to download",
+      "metricLabel": "Output files",
+      "metricValue": "03",
+      "rows": [
+        {
+          "label": "Processed image",
+          "value": "PNG"
+        },
+        {
+          "label": "Preview",
+          "value": "PNG"
+        },
+        {
+          "label": "Bundle",
+          "value": "ZIP"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "about": "About",
+      "lab": "Lab",
+      "contact": "Contact",
+      "menu": "Open menu",
+      "closeMenu": "Close menu",
+      "progress": "Page progress",
+      "themeLight": "Switch to light theme",
+      "themeDark": "Switch to dark theme",
+      "language": "Change language to Portuguese"
+    },
+    "contact": {
+      "eyebrow": "NEXT STEP",
+      "title": "Let’s talk about what needs to work better.",
+      "description": "If you are hiring or have an operation to improve, tell me the context. I reply by email.",
+      "copy": "Copy email",
+      "copied": "Email copied",
+      "copyFailed": "Could not copy. Select the address below.",
+      "email": "Email",
+      "select": "Select address",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Download résumé · Portuguese",
+      "preparing": "The résumé is being prepared."
+    },
+    "projects": {
+      "eyebrow": "SELECTED WORK",
+      "title": "Systems that solve everyday problems.",
+      "description": "Four projects, each starting with an operation or experience that can work better.",
+      "filters": {
+        "all": "All",
+        "systems": "Systems",
+        "interfaces": "Interfaces",
+        "automation": "Automation"
+      },
+      "count": "projects",
+      "openCase": "Explore case",
+      "source": "Public code",
+      "demoLabel": "Illustrative preview",
+      "empty": "No projects in this category.",
+      "skillsHeading": "Choose a technology to highlight related projects."
+    },
+    "case": {
+      "back": "Back to projects",
+      "overview": "CONTEXT",
+      "features": "What was built",
+      "decisions": "Contribution and decisions",
+      "flow": "Solution flow",
+      "preview": "ILLUSTRATIVE PREVIEW",
+      "previewNote": "Demonstration interface with fictitious data",
+      "stack": "Technologies",
+      "limits": "Presentation scope",
+      "limitationsPrivate": "This case keeps private project details private. The preview is an independent composition and does not access production data.",
+      "limitationsPublic": "The preview is illustrative and does not represent a session connected to the project.",
+      "nextCase": "Next case",
+      "previousCase": "Previous case",
+      "notFound": "This project is not available."
+    },
+    "language": "en"
+  }
+}

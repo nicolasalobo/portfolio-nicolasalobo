@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Overview",
+      "title": "Financial summary",
+      "caption": "CONTRACTS / EXPENSES / PAYMENTS",
+      "status": "Demo data",
+      "metricLabel": "Active contracts",
+      "metricValue": "08",
+      "rows": [
+        {
+          "label": "Contract value",
+          "value": "R$ 2.4M"
+        },
+        {
+          "label": "Expenses",
+          "value": "R$ 380K"
+        },
+        {
+          "label": "To pay",
+          "value": "R$ 215K"
+        }
+      ]
+    },
+    {
+      "tab": "Contracts",
+      "title": "Contract tracking",
+      "caption": "COMPANIES / MILESTONES / HISTORY",
+      "status": "Search and filters active",
+      "metricLabel": "Completed milestones",
+      "metricValue": "24",
+      "rows": [
+        {
+          "label": "Project consulting",
+          "value": "In progress"
+        },
+        {
+          "label": "Responsible company",
+          "value": "Contracted"
+        },
+        {
+          "label": "Last update",
+          "value": "Today"
+        }
+      ]
+    },
+    {
+      "tab": "Payments",
+      "title": "Payments this period",
+      "caption": "VENDORS / CONSULTANTS",
+      "status": "Interactive updates",
+      "metricLabel": "Pending payments",
+      "metricValue": "03",
+      "rows": [
+        {
+          "label": "Technical consultant",
+          "value": "Pending"
+        },
+        {
+          "label": "Field support",
+          "value": "Scheduled"
+        },
+        {
+          "label": "Vendor",
+          "value": "Paid"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "about": "About",
+      "lab": "Lab",
+      "contact": "Contact",
+      "menu": "Open menu",
+      "closeMenu": "Close menu",
+      "progress": "Page progress",
+      "themeLight": "Switch to light theme",
+      "themeDark": "Switch to dark theme",
+      "language": "Change language to Portuguese"
+    },
+    "contact": {
+      "eyebrow": "NEXT STEP",
+      "title": "Let’s talk about what needs to work better.",
+      "description": "If you are hiring or have an operation to improve, tell me the context. I reply by email.",
+      "copy": "Copy email",
+      "copied": "Email copied",
+      "copyFailed": "Could not copy. Select the address below.",
+      "email": "Email",
+      "select": "Select address",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Download résumé · Portuguese",
+      "preparing": "The résumé is being prepared."
+    },
+    "projects": {
+      "eyebrow": "SELECTED WORK",
+      "title": "Systems that solve everyday problems.",
+      "description": "Four projects, each starting with an operation or experience that can work better.",
+      "filters": {
+        "all": "All",
+        "systems": "Systems",
+        "interfaces": "Interfaces",
+        "automation": "Automation"
+      },
+      "count": "projects",
+      "openCase": "Explore case",
+      "source": "Public code",
+      "demoLabel": "Illustrative preview",
+      "empty": "No projects in this category.",
+      "skillsHeading": "Choose a technology to highlight related projects."
+    },
+    "case": {
+      "back": "Back to projects",
+      "overview": "CONTEXT",
+      "features": "What was built",
+      "decisions": "Contribution and decisions",
+      "flow": "Solution flow",
+      "preview": "ILLUSTRATIVE PREVIEW",
+      "previewNote": "Demonstration interface with fictitious data",
+      "stack": "Technologies",
+      "limits": "Presentation scope",
+      "limitationsPrivate": "This case keeps private project details private. The preview is an independent composition and does not access production data.",
+      "limitationsPublic": "The preview is illustrative and does not represent a session connected to the project.",
+      "nextCase": "Next case",
+      "previousCase": "Previous case",
+      "notFound": "This project is not available."
+    },
+    "language": "en"
+  }
+}

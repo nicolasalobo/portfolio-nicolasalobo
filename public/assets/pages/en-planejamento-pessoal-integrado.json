@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Today",
+      "title": "Your day, in focus",
+      "caption": "MONDAY / TODAY",
+      "status": "3 priorities",
+      "metricLabel": "Next action",
+      "metricValue": "09:30",
+      "rows": [
+        {
+          "label": "Review deliveries",
+          "value": "30 min"
+        },
+        {
+          "label": "Send proposal",
+          "value": "Next"
+        },
+        {
+          "label": "Walk",
+          "value": "Routine"
+        }
+      ]
+    },
+    {
+      "tab": "Week",
+      "title": "Shape the week",
+      "caption": "WEEKLY PLANNING",
+      "status": "Balanced pace",
+      "metricLabel": "Planned blocks",
+      "metricValue": "16",
+      "rows": [
+        {
+          "label": "Monday",
+          "value": "4 blocks"
+        },
+        {
+          "label": "Wednesday",
+          "value": "3 blocks"
+        },
+        {
+          "label": "Friday",
+          "value": "Review"
+        }
+      ]
+    },
+    {
+      "tab": "Routines",
+      "title": "Habits that repeat",
+      "caption": "PERSONAL ROUTINES",
+      "status": "2 of 3 complete",
+      "metricLabel": "Current streak",
+      "metricValue": "08 days",
+      "rows": [
+        {
+          "label": "Reading",
+          "value": "Complete"
+        },
+        {
+          "label": "Stretching",
+          "value": "Complete"
+        },
+        {
+          "label": "Daily review",
+          "value": "Pending"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "about": "About",
+      "lab": "Lab",
+      "contact": "Contact",
+      "menu": "Open menu",
+      "closeMenu": "Close menu",
+      "progress": "Page progress",
+      "themeLight": "Switch to light theme",
+      "themeDark": "Switch to dark theme",
+      "language": "Change language to Portuguese"
+    },
+    "contact": {
+      "eyebrow": "NEXT STEP",
+      "title": "Let’s talk about what needs to work better.",
+      "description": "If you are hiring or have an operation to improve, tell me the context. I reply by email.",
+      "copy": "Copy email",
+      "copied": "Email copied",
+      "copyFailed": "Could not copy. Select the address below.",
+      "email": "Email",
+      "select": "Select address",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Download résumé · Portuguese",
+      "preparing": "The résumé is being prepared."
+    },
+    "projects": {
+      "eyebrow": "SELECTED WORK",
+      "title": "Systems that solve everyday problems.",
+      "description": "Four projects, each starting with an operation or experience that can work better.",
+      "filters": {
+        "all": "All",
+        "systems": "Systems",
+        "interfaces": "Interfaces",
+        "automation": "Automation"
+      },
+      "count": "projects",
+      "openCase": "Explore case",
+      "source": "Public code",
+      "demoLabel": "Illustrative preview",
+      "empty": "No projects in this category.",
+      "skillsHeading": "Choose a technology to highlight related projects."
+    },
+    "case": {
+      "back": "Back to projects",
+      "overview": "CONTEXT",
+      "features": "What was built",
+      "decisions": "Contribution and decisions",
+      "flow": "Solution flow",
+      "preview": "ILLUSTRATIVE PREVIEW",
+      "previewNote": "Demonstration interface with fictitious data",
+      "stack": "Technologies",
+      "limits": "Presentation scope",
+      "limitationsPrivate": "This case keeps private project details private. The preview is an independent composition and does not access production data.",
+      "limitationsPublic": "The preview is illustrative and does not represent a session connected to the project.",
+      "nextCase": "Next case",
+      "previousCase": "Previous case",
+      "notFound": "This project is not available."
+    },
+    "language": "en"
+  }
+}

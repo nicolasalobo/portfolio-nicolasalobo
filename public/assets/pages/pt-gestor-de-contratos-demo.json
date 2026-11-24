@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Visão geral",
+      "title": "Resumo financeiro",
+      "caption": "CONTRATOS / DESPESAS / PAGAMENTOS",
+      "status": "Dados demonstrativos",
+      "metricLabel": "Contratos ativos",
+      "metricValue": "08",
+      "rows": [
+        {
+          "label": "Valor contratado",
+          "value": "R$ 2,4 mi"
+        },
+        {
+          "label": "Despesas",
+          "value": "R$ 380 mil"
+        },
+        {
+          "label": "A pagar",
+          "value": "R$ 215 mil"
+        }
+      ]
+    },
+    {
+      "tab": "Contratos",
+      "title": "Acompanhamento de contratos",
+      "caption": "EMPRESAS / ETAPAS / HISTÓRICO",
+      "status": "Busca e filtros ativos",
+      "metricLabel": "Etapas concluídas",
+      "metricValue": "24",
+      "rows": [
+        {
+          "label": "Consultoria de projeto",
+          "value": "Em andamento"
+        },
+        {
+          "label": "Empresa responsável",
+          "value": "Contratada"
+        },
+        {
+          "label": "Última atualização",
+          "value": "Hoje"
+        }
+      ]
+    },
+    {
+      "tab": "Pagamentos",
+      "title": "Pagamentos do período",
+      "caption": "FORNECEDORES / CONSULTORES",
+      "status": "Atualização interativa",
+      "metricLabel": "Pagamentos pendentes",
+      "metricValue": "03",
+      "rows": [
+        {
+          "label": "Consultor técnico",
+          "value": "Aguardando"
+        },
+        {
+          "label": "Apoio de campo",
+          "value": "Programado"
+        },
+        {
+          "label": "Fornecedor",
+          "value": "Pago"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projetos",
+      "experience": "Experiência",
+      "about": "Sobre",
+      "lab": "Laboratório",
+      "contact": "Contato",
+      "menu": "Abrir menu",
+      "closeMenu": "Fechar menu",
+      "progress": "Progresso da página",
+      "themeLight": "Ativar tema claro",
+      "themeDark": "Ativar tema escuro",
+      "language": "Mudar idioma para inglês"
+    },
+    "contact": {
+      "eyebrow": "PRÓXIMO PASSO",
+      "title": "Vamos conversar sobre o que precisa funcionar melhor.",
+      "description": "Se você está contratando ou tem uma operação para melhorar, me conte o contexto. Eu respondo por e-mail.",
+      "copy": "Copiar e-mail",
+      "copied": "E-mail copiado",
+      "copyFailed": "Não foi possível copiar. Selecione o endereço abaixo.",
+      "email": "E-mail",
+      "select": "Selecionar endereço",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Baixar currículo em português",
+      "preparing": "O currículo está em preparação."
+    },
+    "projects": {
+      "eyebrow": "TRABALHO SELECIONADO",
+      "title": "Sistemas que resolvem o dia a dia.",
+      "description": "Quatro projetos, cada um partindo de uma operação ou experiência que pode ser melhorada.",
+      "filters": {
+        "all": "Todos",
+        "systems": "Sistemas",
+        "interfaces": "Interfaces",
+        "automation": "Automação"
+      },
+      "count": "projetos",
+      "openCase": "Explorar case",
+      "source": "Código público",
+      "demoLabel": "Prévia demonstrativa",
+      "empty": "Nenhum projeto nesta categoria.",
+      "skillsHeading": "Escolha uma tecnologia para destacar projetos relacionados."
+    },
+    "case": {
+      "back": "Voltar aos projetos",
+      "overview": "CONTEXTO",
+      "features": "O que foi construído",
+      "decisions": "Participação e decisões",
+      "flow": "Fluxo da solução",
+      "preview": "PRÉVIA ILUSTRATIVA",
+      "previewNote": "Interface demonstrativa com dados fictícios",
+      "stack": "Tecnologias",
+      "limits": "Escopo desta apresentação",
+      "limitationsPrivate": "Este case preserva os detalhes privados do projeto. A prévia é uma composição independente e não acessa dados de produção.",
+      "limitationsPublic": "A prévia é uma composição ilustrativa e não representa uma sessão conectada ao projeto.",
+      "nextCase": "Próximo case",
+      "previousCase": "Case anterior",
+      "notFound": "Este projeto não está disponível."
+    },
+    "language": "pt"
+  }
+}

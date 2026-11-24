@@ -1,0 +1,175 @@
+{
+  "map": [
+    {
+      "slug": "gestao-de-estoque-e-vendas",
+      "title": "Stock and sales management",
+      "categoryLabel": "Systems",
+      "summary": "Stock, sales, incoming payments, and cash operations in one operations panel."
+    },
+    {
+      "slug": "planejamento-pessoal-integrado",
+      "title": "Integrated personal planning",
+      "categoryLabel": "Systems",
+      "summary": "Calendar, tasks, and routines organized across different time horizons."
+    },
+    {
+      "slug": "landing-page-negocio-local",
+      "title": "Landing page for a local business",
+      "categoryLabel": "Interfaces",
+      "summary": "A commercial introduction that brings together a gallery, common questions, and contact."
+    },
+    {
+      "slug": "python-tools-hub",
+      "title": "Python Tools Hub",
+      "categoryLabel": "Automation",
+      "summary": "A web hub that discovers Python scripts and presents them as tools."
+    },
+    {
+      "slug": "gestor-de-contratos-demo",
+      "title": "Contract Manager",
+      "categoryLabel": "Systems",
+      "summary": "Interactive dashboard for contracts, milestones, expenses, and payments using fictional data."
+    }
+  ],
+  "skills": [
+    {
+      "name": "TypeScript",
+      "projects": [
+        "gestao-de-estoque-e-vendas",
+        "planejamento-pessoal-integrado",
+        "landing-page-negocio-local"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "projects": [
+        "gestao-de-estoque-e-vendas",
+        "planejamento-pessoal-integrado"
+      ]
+    },
+    {
+      "name": "React",
+      "projects": [
+        "planejamento-pessoal-integrado",
+        "landing-page-negocio-local"
+      ]
+    },
+    {
+      "name": "Drizzle",
+      "projects": [
+        "gestao-de-estoque-e-vendas"
+      ]
+    },
+    {
+      "name": "LibSQL",
+      "projects": [
+        "gestao-de-estoque-e-vendas"
+      ]
+    },
+    {
+      "name": "Supabase",
+      "projects": [
+        "planejamento-pessoal-integrado"
+      ]
+    },
+    {
+      "name": "Vite",
+      "projects": [
+        "landing-page-negocio-local"
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "projects": [
+        "landing-page-negocio-local"
+      ]
+    },
+    {
+      "name": "Python",
+      "projects": [
+        "python-tools-hub"
+      ]
+    },
+    {
+      "name": "Streamlit",
+      "projects": [
+        "python-tools-hub"
+      ]
+    },
+    {
+      "name": "Pillow",
+      "projects": [
+        "python-tools-hub"
+      ]
+    },
+    {
+      "name": "Java",
+      "projects": [
+        "biblioteca-de-jogos-java"
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "about": "About",
+      "lab": "Lab",
+      "contact": "Contact",
+      "menu": "Open menu",
+      "closeMenu": "Close menu",
+      "progress": "Page progress",
+      "themeLight": "Switch to light theme",
+      "themeDark": "Switch to dark theme",
+      "language": "Change language to Portuguese"
+    },
+    "contact": {
+      "eyebrow": "NEXT STEP",
+      "title": "Let’s talk about what needs to work better.",
+      "description": "If you are hiring or have an operation to improve, tell me the context. I reply by email.",
+      "copy": "Copy email",
+      "copied": "Email copied",
+      "copyFailed": "Could not copy. Select the address below.",
+      "email": "Email",
+      "select": "Select address",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Download résumé · Portuguese",
+      "preparing": "The résumé is being prepared."
+    },
+    "projects": {
+      "eyebrow": "SELECTED WORK",
+      "title": "Systems that solve everyday problems.",
+      "description": "Four projects, each starting with an operation or experience that can work better.",
+      "filters": {
+        "all": "All",
+        "systems": "Systems",
+        "interfaces": "Interfaces",
+        "automation": "Automation"
+      },
+      "count": "projects",
+      "openCase": "Explore case",
+      "source": "Public code",
+      "demoLabel": "Illustrative preview",
+      "empty": "No projects in this category.",
+      "skillsHeading": "Choose a technology to highlight related projects."
+    },
+    "case": {
+      "back": "Back to projects",
+      "overview": "CONTEXT",
+      "features": "What was built",
+      "decisions": "Contribution and decisions",
+      "flow": "Solution flow",
+      "preview": "ILLUSTRATIVE PREVIEW",
+      "previewNote": "Demonstration interface with fictitious data",
+      "stack": "Technologies",
+      "limits": "Presentation scope",
+      "limitationsPrivate": "This case keeps private project details private. The preview is an independent composition and does not access production data.",
+      "limitationsPublic": "The preview is illustrative and does not represent a session connected to the project.",
+      "nextCase": "Next case",
+      "previousCase": "Previous case",
+      "notFound": "This project is not available."
+    },
+    "language": "en"
+  }
+}

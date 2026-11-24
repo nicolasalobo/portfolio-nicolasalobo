@@ -1,0 +1,133 @@
+{
+  "screens": [
+    {
+      "tab": "Apresentação",
+      "title": "Uma oferta clara",
+      "caption": "APRESENTAÇÃO COMERCIAL",
+      "status": "Visão inicial",
+      "metricLabel": "Seções da página",
+      "metricValue": "04",
+      "rows": [
+        {
+          "label": "Proposta",
+          "value": "Direta"
+        },
+        {
+          "label": "Conteúdo",
+          "value": "Escaneável"
+        },
+        {
+          "label": "Contato",
+          "value": "Visível"
+        }
+      ]
+    },
+    {
+      "tab": "Galeria",
+      "title": "Detalhes em contexto",
+      "caption": "GALERIA DEMONSTRATIVA",
+      "status": "Toque para explorar",
+      "metricLabel": "Coleções visuais",
+      "metricValue": "03",
+      "rows": [
+        {
+          "label": "Ambientes",
+          "value": "Galeria"
+        },
+        {
+          "label": "Serviços",
+          "value": "Resumo"
+        },
+        {
+          "label": "Destaques",
+          "value": "Seleção"
+        }
+      ]
+    },
+    {
+      "tab": "Perguntas",
+      "title": "Dúvidas respondidas",
+      "caption": "PERGUNTAS FREQUENTES",
+      "status": "Informação organizada",
+      "metricLabel": "Tópicos",
+      "metricValue": "05",
+      "rows": [
+        {
+          "label": "Como funciona?",
+          "value": "Resposta"
+        },
+        {
+          "label": "Onde fica?",
+          "value": "Resposta"
+        },
+        {
+          "label": "Como falar?",
+          "value": "Contato"
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "nav": {
+      "projects": "Projetos",
+      "experience": "Experiência",
+      "about": "Sobre",
+      "lab": "Laboratório",
+      "contact": "Contato",
+      "menu": "Abrir menu",
+      "closeMenu": "Fechar menu",
+      "progress": "Progresso da página",
+      "themeLight": "Ativar tema claro",
+      "themeDark": "Ativar tema escuro",
+      "language": "Mudar idioma para inglês"
+    },
+    "contact": {
+      "eyebrow": "PRÓXIMO PASSO",
+      "title": "Vamos conversar sobre o que precisa funcionar melhor.",
+      "description": "Se você está contratando ou tem uma operação para melhorar, me conte o contexto. Eu respondo por e-mail.",
+      "copy": "Copiar e-mail",
+      "copied": "E-mail copiado",
+      "copyFailed": "Não foi possível copiar. Selecione o endereço abaixo.",
+      "email": "E-mail",
+      "select": "Selecionar endereço",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "resume": "Baixar currículo em português",
+      "preparing": "O currículo está em preparação."
+    },
+    "projects": {
+      "eyebrow": "TRABALHO SELECIONADO",
+      "title": "Sistemas que resolvem o dia a dia.",
+      "description": "Quatro projetos, cada um partindo de uma operação ou experiência que pode ser melhorada.",
+      "filters": {
+        "all": "Todos",
+        "systems": "Sistemas",
+        "interfaces": "Interfaces",
+        "automation": "Automação"
+      },
+      "count": "projetos",
+      "openCase": "Explorar case",
+      "source": "Código público",
+      "demoLabel": "Prévia demonstrativa",
+      "empty": "Nenhum projeto nesta categoria.",
+      "skillsHeading": "Escolha uma tecnologia para destacar projetos relacionados."
+    },
+    "case": {
+      "back": "Voltar aos projetos",
+      "overview": "CONTEXTO",
+      "features": "O que foi construído",
+      "decisions": "Participação e decisões",
+      "flow": "Fluxo da solução",
+      "preview": "PRÉVIA ILUSTRATIVA",
+      "previewNote": "Interface demonstrativa com dados fictícios",
+      "stack": "Tecnologias",
+      "limits": "Escopo desta apresentação",
+      "limitationsPrivate": "Este case preserva os detalhes privados do projeto. A prévia é uma composição independente e não acessa dados de produção.",
+      "limitationsPublic": "A prévia é uma composição ilustrativa e não representa uma sessão conectada ao projeto.",
+      "nextCase": "Próximo case",
+      "previousCase": "Case anterior",
+      "notFound": "Este projeto não está disponível."
+    },
+    "language": "pt"
+  }
+}

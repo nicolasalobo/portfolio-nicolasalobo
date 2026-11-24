@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio de Nicolas Lobo
 
-## Getting Started
+Reconstrução estática e editável da versão escura hospedada na Vercel, incluindo o Gestor de Contratos e a foto profissional. Esta branch não contém a implementação original em Next.js/TypeScript: o HTML e CSS foram recuperados a partir das páginas publicadas, e os comportamentos interativos foram reimplementados em JavaScript sem dependências.
 
-First, run the development server:
+## Editar
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Home em português e inglês: `public/pt/index.html` e `public/en/index.html`.
+- Projetos: `public/{pt,en}/projects/<slug>/index.html`.
+- Dados interativos do mapa e das telas dos projetos: `public/assets/pages/`.
+- Aparência e temas: `public/assets/site.css` e `public/assets/theme.js`.
+- Interações de navegação, filtros, mapa, habilidades, abas e contato: `public/assets/site.js`.
+- Foto e currículo públicos: diretório `public/`. A demo do Gestor usa dados fictícios.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Rode `python3 -m http.server 4173 --directory public` e abra http://localhost:4173/pt/. A configuração da Vercel serve `public/` sem build; a página inicial redireciona para `/pt`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O visual e o conteúdo preservam o deploy original. Navegação é por links HTML e não depende do runtime do Next.js. As transições foram simplificadas e as páginas não usam processamento no servidor.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Verificar
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Execute `npm ci` e `npm test` para verificar a navegação em ambos os idiomas e as interações em DOM. Esta branch não faz deploy automático.

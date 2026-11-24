@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://portfolio-nicolasalobo-preview.vercel.app
+Sitemap: https://portfolio-nicolasalobo-preview.vercel.app/sitemap.xml
