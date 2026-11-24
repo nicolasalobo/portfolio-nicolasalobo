@@ -1,29 +1,47 @@
-export default function Experience({ dict }: { dict: any }) {
+import type { Dictionary, Locale } from "@/dictionaries";
+import { experiences } from "@/data/portfolio";
+import Reveal from "./Reveal";
+
+export default function Experience({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     return (
-        <section id="experience" className="py-24 bg-card-bg">
+        <section id="experience" className="content-section experience-section" aria-labelledby="experience-heading">
             <div className="container">
-                <h2 className="text-4xl font-bold mb-12 text-center text-primary">{dict.experience.title}</h2>
-                <div className="relative max-w-3xl mx-auto before:content-[''] before:absolute before:left-4 md:before:left-1/2 before:-translate-x-1/2 before:w-0.5 before:h-full before:bg-card-border">
-                    {/* Placeholder for experience items */}
-                    <div className="mb-12 relative w-full md:w-1/2 pl-12 md:pl-0 md:pr-8 md:text-right md:left-0">
-                        <div className="absolute top-0 w-4 h-4 bg-primary rounded-full z-10 left-2 md:left-auto md:-right-2"></div>
-                        <div className="">
-                            <h3 className="text-primary text-xl font-semibold mb-2">Senior Developer</h3>
-                            <span className="block text-sm text-secondary mb-2">2023 - Present</span>
-                            <p className="text-foreground">Tech Company Inc.</p>
-                            <p className="text-foreground opacity-80">Leading backend development...</p>
+                <Reveal>
+                    <div className="section-heading section-heading-row">
+                        <div>
+                            <p className="eyebrow">{dict.experience.eyebrow}</p>
+                            <h2 id="experience-heading">{dict.experience.title}</h2>
+                            <p className="section-intro">{dict.experience.description}</p>
                         </div>
+                        <span className="section-index mono" aria-hidden="true">02 / 04</span>
                     </div>
-                    <div className="mb-12 relative w-full md:w-1/2 pl-12 md:pl-8 md:text-left md:left-1/2">
-                        <div className="absolute top-0 w-4 h-4 bg-primary rounded-full z-10 left-2 md:-left-2"></div>
-                        <div className="">
-                            <h3 className="text-primary text-xl font-semibold mb-2">Full Stack Developer</h3>
-                            <span className="block text-sm text-secondary mb-2">2021 - 2023</span>
-                            <p className="text-foreground">Startup LLC</p>
-                            <p className="text-foreground opacity-80">Built scalable web applications...</p>
-                        </div>
+
+                    <div className="timeline">
+                        {experiences[lang].map((experience, index) => (
+                            <details className="timeline-entry" key={experience.organization} open={index === 0}>
+                                <summary>
+                                    <span className="timeline-marker" aria-hidden="true"><i /></span>
+                                    <span className="timeline-heading">
+                                        <span className="timeline-role">{experience.role}</span>
+                                        <span className="timeline-org">{experience.organization}</span>
+                                    </span>
+                                    <span className="timeline-date mono">{experience.date}</span>
+                                    <span className="timeline-toggle" aria-hidden="true">+</span>
+                                </summary>
+                                <div className="timeline-details">
+                                    <p>{experience.summary}</p>
+                                    <ul>
+                                        {experience.details.map((detail) => <li key={detail}>{detail}</li>)}
+                                    </ul>
+                                    <div className="project-tech-list">
+                                        {experience.technologies.map((technology) => <span key={technology} className="tech-pill">{technology}</span>)}
+                                    </div>
+                                    <span className="timeline-disclosure-label">{dict.experience.details}</span>
+                                </div>
+                            </details>
+                        ))}
                     </div>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

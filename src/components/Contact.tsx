@@ -1,148 +1,87 @@
 "use client";
 
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { TextField, Button, Snackbar, Alert } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useRef, useState } from "react";
+import type { Dictionary, Locale } from "@/dictionaries";
 
-export default function Contact({ dict }: { dict: any }) {
-    const form = useRef<HTMLFormElement>(null);
-    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-    const [openSnackbar, setOpenSnackbar] = useState(false);
+const email = "nicolaslobo9@gmail.com";
 
-    // Custom MUI theme to match Tailwind colors
-    const theme = createTheme({
-        palette: {
-            mode: 'dark', // We can make this dynamic later
-            primary: {
-                main: '#7c3aed', // Violet 600
-            },
-            secondary: {
-                main: '#06b6d4', // Cyan 500
-            },
-        },
-        components: {
-            MuiTextField: {
-                styleOverrides: {
-                    root: {
-                        '& .MuiOutlinedInput-root': {
-                            '& fieldset': {
-                                borderColor: 'rgba(255, 255, 255, 0.23)',
-                            },
-                            '&:hover fieldset': {
-                                borderColor: '#7c3aed',
-                            },
-                            '&.Mui-focused fieldset': {
-                                borderColor: '#7c3aed',
-                            },
-                        },
-                        '& .MuiInputLabel-root': {
-                            color: 'rgba(255, 255, 255, 0.7)',
-                        },
-                        '& .MuiInputBase-input': {
-                            color: '#fff',
-                        },
-                    },
-                },
-            },
-        },
-    });
+export default function Contact({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+    const emailRef = useRef<HTMLInputElement>(null);
+    const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
 
-    const sendEmail = (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("loading");
-
-        // Replace these with your actual EmailJS Service ID, Template ID, and Public Key
-        // For now, we simulate a success after 2 seconds if keys are missing
-        const serviceId = "YOUR_SERVICE_ID";
-        const templateId = "YOUR_TEMPLATE_ID";
-        const publicKey = "YOUR_PUBLIC_KEY";
-
-        if (serviceId === "YOUR_SERVICE_ID") {
-            setTimeout(() => {
-                setStatus("success");
-                setOpenSnackbar(true);
-                if (form.current) form.current.reset();
-            }, 1500);
-            return;
-        }
-
-        if (form.current) {
-            emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-                .then((result) => {
-                    setStatus("success");
-                    setOpenSnackbar(true);
-                    if (form.current) form.current.reset();
-                }, (error) => {
-                    setStatus("error");
-                    setOpenSnackbar(true);
-                });
+    const copyEmail = async () => {
+        try {
+            if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+            await navigator.clipboard.writeText(email);
+            setCopyState("copied");
+        } catch {
+            const field = emailRef.current;
+            if (field) {
+                field.focus();
+                field.select();
+                try {
+                    const copied = document.execCommand("copy");
+                    setCopyState(copied ? "copied" : "failed");
+                } catch {
+                    setCopyState("failed");
+                }
+            } else {
+                setCopyState("failed");
+            }
         }
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <section id="contact" className="py-24 bg-background">
-                <div className="container max-w-2xl">
-                    <h2 className="text-4xl font-bold mb-12 text-center text-primary">{dict.contact.title}</h2>
-
-                    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6 bg-card-bg p-8 rounded-2xl border border-card-border shadow-lg">
-                        <TextField
-                            label="Name"
-                            name="user_name"
-                            variant="outlined"
-                            fullWidth
-                            required
-                        />
-                        <TextField
-                            label="Email"
-                            name="user_email"
-                            type="email"
-                            variant="outlined"
-                            fullWidth
-                            required
-                        />
-                        <TextField
-                            label="Message"
-                            name="message"
-                            multiline
-                            rows={4}
-                            variant="outlined"
-                            fullWidth
-                            required
-                        />
-
-                        <Button
-                            type="submit"
-                            variant="contained"
-                            size="large"
-                            disabled={status === "loading"}
-                            sx={{
-                                mt: 2,
-                                bgcolor: 'var(--primary)',
-                                '&:hover': { bgcolor: 'var(--primary-hover)' },
-                                textTransform: 'none',
-                                fontSize: '1.1rem',
-                                fontWeight: 600
-                            }}
-                        >
-                            {status === "loading" ? "Sending..." : "Send Message"}
-                        </Button>
-                    </form>
-
-                    <div className="mt-12 text-center">
-                        <p className="text-xl text-foreground opacity-80">
-                            Or email me directly at: <a href="mailto:contact@nicolaslobo.com" className="text-primary font-bold hover:underline">contact@nicolaslobo.com</a>
+        <section id="contact" className="content-section contact-section" aria-labelledby="contact-heading">
+            <div className="container">
+                <div className="contact-panel">
+                    <div className="contact-main">
+                        <p className="eyebrow">{dict.contact.eyebrow}</p>
+                        <h2 id="contact-heading">{dict.contact.title}</h2>
+                        <p>{dict.contact.description}</p>
+                        <div className="contact-actions">
+                            <a className="button button-primary" href={"mailto:" + email}>
+                                {dict.contact.email}<span aria-hidden="true">↗</span>
+                            </a>
+                            <button className="button button-copy" type="button" onClick={copyEmail}>
+                                <span aria-hidden="true">{copyState === "copied" ? "✓" : "▢"}</span>
+                                {copyState === "copied" ? dict.contact.copied : dict.contact.copy}
+                            </button>
+                        </div>
+                        <div className="copy-fallback">
+                            <label className="mono" htmlFor="contact-email">{dict.contact.select}</label>
+                            <input
+                                ref={emailRef}
+                                id="contact-email"
+                                type="text"
+                                readOnly
+                                value={email}
+                                onFocus={(event) => event.currentTarget.select()}
+                                onClick={(event) => event.currentTarget.select()}
+                            />
+                        </div>
+                        <p className="copy-status" role="status" aria-live="polite" aria-atomic="true">
+                            {copyState === "copied" ? dict.contact.copied : copyState === "failed" ? dict.contact.copyFailed : ""}
                         </p>
                     </div>
-
-                    <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={() => setOpenSnackbar(false)}>
-                        <Alert onClose={() => setOpenSnackbar(false)} severity={status === "success" ? "success" : "error"} sx={{ width: '100%' }}>
-                            {status === "success" ? "Message sent successfully!" : "Failed to send message. Please try again."}
-                        </Alert>
-                    </Snackbar>
+                    <div className="contact-side">
+                        <span className="contact-orbit contact-orbit-one" aria-hidden="true" />
+                        <span className="contact-orbit contact-orbit-two" aria-hidden="true" />
+                        <span className="contact-node" aria-hidden="true">N</span>
+                        <div className="contact-links">
+                            <a href="https://github.com/nicolasalobo" target="_blank" rel="noreferrer">
+                                <span>{dict.contact.github}</span><span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nicolasalobo" target="_blank" rel="noreferrer">
+                                <span>{dict.contact.linkedin}</span><span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="/curriculo-nicolas-lobo-pt.pdf" download>
+                                <span>{lang === "pt" ? dict.contact.resume : "Download résumé · Portuguese"}</span><span aria-hidden="true">↓</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </ThemeProvider>
+            </div>
+        </section>
     );
 }

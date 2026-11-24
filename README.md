@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nicolas Lobo — portfólio
 
-## Getting Started
+Portfólio bilíngue em Next.js com cases de projetos, currículo em português e interações responsivas. O idioma padrão é português; as rotas públicas são `/pt` e `/en`.
 
-First, run the development server:
+## Executar localmente
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra `http://localhost:3000`. A raiz redireciona para `/pt`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validar uma alteração
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
 
-## Learn More
+O workflow do GitHub executa essas três verificações e não publica o site.
 
-To learn more about Next.js, take a look at the following resources:
+## Editar conteúdo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/dictionaries.ts`: textos da interface em português e inglês.
+- `src/data/portfolio.ts`: cases, experiências, tecnologias, laboratório e prévias demonstrativas.
+- `src/components`: componentes de apresentação e interações.
+- `src/app/(localized)/[lang]/projects/[slug]/page.tsx`: estrutura dos cases.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Os cases privados são apresentados com nomes e detalhes neutralizados. As prévias são ilustrações locais e usam dados fictícios; os visitantes não precisam acessar sistemas ou APIs dos projetos.
 
-## Deploy on Vercel
+## Currículo público
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O arquivo público é `public/curriculo-nicolas-lobo-pt.pdf`. Para recriá-lo após editar `scripts/generate_resume.py`, instale `reportlab` (`python -m pip install reportlab`) e execute:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+python scripts/generate_resume.py
+```
+
+O currículo resume o material fornecido e omite telefone, nomes de clientes e valores financeiros.
+
+## Hospedagem
+
+O projeto está configurado para Next.js na Vercel. Conecte o repositório no painel da Vercel para criar uma prévia por branch ou pull request. A raiz do projeto é a pasta do repositório; o comando de build é `npm run build`. Não há etapa de publicação no GitHub Pages.

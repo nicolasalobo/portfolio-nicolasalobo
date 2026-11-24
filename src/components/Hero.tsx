@@ -1,38 +1,61 @@
-"use client";
+import Link from "next/link";
+import Image from "next/image";
+import type { Dictionary, Locale } from "@/dictionaries";
+import { projects } from "@/data/portfolio";
+import ProjectMap from "./ProjectMap";
 
-import { getDictionary } from "@/dictionaries";
-import SplitText from "./SplitText";
-
-export default function Hero({ dict }: { dict: any }) {
+export default function Hero({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     return (
-        <section className="min-h-screen flex items-center pt-20 relative z-10">
-            <div className="container grid md:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col justify-center items-start order-2 md:order-1">
-                    <h2 className="text-2xl text-primary mb-4">{dict.hero.greeting}</h2>
-                    <div className="text-6xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        <SplitText text="Nicolas Lobo" />
+        <section className="hero-section" aria-labelledby="hero-title">
+            <div className="hero-grid container">
+                <div className="hero-copy">
+                    <div className="hero-profile">
+                        <Image
+                            className="hero-profile-image"
+                            src="/nicolas-lobo.png"
+                            alt="Nicolas Lobo"
+                            width={88}
+                            height={88}
+                            priority
+                        />
+                        <p className="eyebrow hero-eyebrow"><span className="status-light" />{dict.hero.eyebrow}</p>
                     </div>
-                    <h3 className="text-3xl md:text-4xl text-foreground mb-6 opacity-90">{dict.hero.role}</h3>
-                    <p className="text-xl max-w-xl mb-8 leading-relaxed opacity-80">{dict.hero.description}</p>
-                    <div className="flex gap-4">
-                        <button className="btn btn-primary">{dict.hero.downloadCv}</button>
-                        <button className="btn btn-outline">{dict.hero.contactMe}</button>
+                    <h1 id="hero-title">
+                        <span>{dict.hero.title.split(" ")[0]}</span>
+                        <span className="hero-last-name">{dict.hero.title.split(" ").slice(1).join(" ")}</span>
+                    </h1>
+                    <p className="hero-role">{dict.hero.role}</p>
+                    <p className="hero-description">{dict.hero.description}</p>
+                    <div className="hero-actions">
+                        <Link className="button button-primary" href={"/" + lang + "#projects"}>
+                            {dict.hero.projects}<span aria-hidden="true">↘</span>
+                        </Link>
+                        <Link className="button button-quiet" href={"/" + lang + "#contact"}>
+                            {dict.hero.contact}<span aria-hidden="true">↗</span>
+                        </Link>
+                    </div>
+                    <a className="resume-inline" href="/curriculo-nicolas-lobo-pt.pdf" download>
+                        <span className="resume-icon" aria-hidden="true">↓</span>
+                        <span>{dict.hero.resume}</span>
+                        <span className="mono">PDF · PT</span>
+                    </a>
+                    <div className="hero-availability">
+                        <span className="availability-dot" aria-hidden="true" />
+                        <span>{dict.hero.available}</span>
                     </div>
                 </div>
 
-                <div className="flex justify-center order-1 md:order-2">
-                    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl glow-animation">
-                        {/* Placeholder for user image - replace src with actual image path later */}
-                        <img
-                            src="https://github.com/nicolasalobo.png"
-                            alt="Nicolas Lobo"
-                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                            onError={(e) => {
-                                // Fallback if GitHub image fails or isn't desired
-                                (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Nicolas+Lobo&background=7c3aed&color=fff&size=512";
-                            }}
-                        />
-                    </div>
+                <div className="hero-visual">
+                    <ProjectMap
+                        lang={lang}
+                        dict={dict}
+                        items={projects.map((project) => ({
+                            slug: project.slug,
+                            title: project.copy[lang].title,
+                            categoryLabel: project.copy[lang].categoryLabel,
+                            summary: project.copy[lang].summary,
+                        }))}
+                    />
                 </div>
             </div>
         </section>
